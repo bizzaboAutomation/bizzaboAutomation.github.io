@@ -50,7 +50,7 @@
         a.async = 1;
         a.src = g;
         m.parentNode.insertBefore(a, m);
-    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+    })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
     var clientId;
     window.ga('create', 'UA-126890094-1', 'auto');
     window.ga(function(tracker) {
@@ -63,12 +63,15 @@
         if (event.data && (event.data = 'ticketWidgetReady')) {
             var frameWindows = document.getElementsByClassName('bizzabo-tickets-widget');
             for (var i = 0; i < frameWindows.length; i++) {
+                console.log('---> 1')
                 var iframeSelector = frameWindows[i].querySelector('iframe');
                         var data = {type: 'clientId', val: clientId};
                         var iframe = iframeSelector && iframeSelector.contentWindow;
                         if(iframe) {
+                             console.log('---> 2')
                             iframe.postMessage(data, 'https://qa-accounts.ext2.clusters.bizzabo.com');
                         } else {
+                            console.log('---> 3')
                             console.error('Analytics: Could not find ticket widget IFRAME');
                         }
                     }
