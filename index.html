@@ -11,7 +11,7 @@
     var bz = document.createElement('script');
     bz.type = 'text/javascript';
     bz.async = true;
-    bz.src = 'https://qa-organizer.ext2.clusters.bizzabo.com/widgets/agenda/agenda.js';
+    bz.src = 'https://qa-organizer.ext.dev.bizzabo.com/widgets/agenda/agenda.js';
     var s = document.getElementsByTagName('script')[0];
     s.parentNode.insertBefore(bz, s);
 })();</script>
@@ -23,7 +23,7 @@
     var bz = document.createElement('script');
     bz.type = 'text/javascript';
     bz.async = true;
-    bz.src = 'https://qa-organizer.ext2.clusters.bizzabo.com/widgets/webcommunity/webcommunity.js';
+    bz.src = 'https://qa-organizer.ext.dev.bizzabo.com/widgets/webcommunity/webcommunity.js';
     var s = document.getElementsByTagName('script')[0];
     s.parentNode.insertBefore(bz, s);
 })();</script>
@@ -34,7 +34,7 @@
 <script type="text/javascript">
     !function() {
         var e = document.createElement("script");
-        window.bz_widget_env = "https://qa-events.ext2.clusters.bizzabo.com", e.type = "text/javascript", e.async = !0, e.src = "https://qa-organizer.ext2.clusters.bizzabo.com/widgets/sections/sections.js";
+        window.bz_widget_env = "https://qa-events.ext.dev.bizzabo.com", e.type = "text/javascript", e.async = !0, e.src = "https://qa-organizer.ext2.clusters.bizzabo.com/widgets/sections/sections.js";
         var t=document.getElementsByTagName("script")[0];t.parentNode.insertBefore(e,t)}();
 </script>
 <!-- Bizzabo Section End -->
@@ -69,7 +69,7 @@
                         var iframe = iframeSelector && iframeSelector.contentWindow;
                         if(iframe) {
                              console.log('---> 2')
-                            iframe.postMessage(data, 'https://qa-accounts.ext2.clusters.bizzabo.com');
+                            iframe.postMessage(data, 'https://qa-accounts.ext.dev.bizzabo.com');
                         } else {
                             console.log('---> 3')
                             console.error('Analytics: Could not find ticket widget IFRAME');
